@@ -5,13 +5,16 @@
  */
 package pe.edu.uni.rmi.interfaz;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
 /**
  *
  * @author Intel
  */
-public interface RmiInterface {
-    public int suma(int a, int b);
-    public int diferencia(int a, int b);
-    public int producto(int a, int b);
-    public int cociente(int a, int b);
+public interface RmiInterface extends Remote {
+    public int suma(int a, int b) throws RemoteException;
+    public int diferencia(int a, int b) throws RemoteException;
+    public int producto(int a, int b) throws RemoteException;
+    public int cociente(int a, int b) throws RemoteException;
 }
